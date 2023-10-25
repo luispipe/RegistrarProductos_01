@@ -66,11 +66,11 @@
                         android:text="Cantidad:" />
 
                     <EditText
-                        android:id="@+id/editTextText2"
+                        android:id="@+id/editTextCantidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="cantidad disponible"
+                        android:hint="cantidad a llevar"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -88,7 +88,7 @@
                         android:text="Precio" />
 
                     <EditText
-                        android:id="@+id/editTextText"
+                        android:id="@+id/editTextPrecio"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
