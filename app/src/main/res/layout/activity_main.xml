@@ -128,36 +128,32 @@
 
                         <TextView
                             android:id="@+id/tvTableNombre"
-                            android:layout_width="wrap_content"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="Nombre"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/tvTableCantidad"
-                            android:layout_width="wrap_content"
+                            android:layout_width="85dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="Cantidad"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/tvTablePrecio"
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="Precio"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/tvTableValor"
-                            android:layout_width="wrap_content"
+                            android:layout_width="85dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="Valor"
                             android:textAlignment="center"
                             android:textSize="20sp" />

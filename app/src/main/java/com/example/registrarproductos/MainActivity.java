@@ -3,6 +3,8 @@ package com.example.registrarproductos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
                     int precioNew= Integer.parseInt(precio);
                     Producto nuevo= new Producto(nombre,cantidadNew,precioNew);
                     canasta.add(nuevo);
+                    total(canasta);
                     llenarTabla(nuevo);
+                    limpiarRegistro();
                 }
             }
         });
@@ -64,26 +68,44 @@ public class MainActivity extends AppCompatActivity {
 
         TextView cell1= new TextView(this);
         cell1.setText(product.getNombre());
-        cell1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        cell1.setWidth(110);
+        cell1.setGravity(View.TEXT_ALIGNMENT_GRAVITY);
         fila.addView(cell1);
 
         TextView cell2= new TextView(this);
         cell2.setText(product.getCantidad()+"");
-        cell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        cell2.setWidth(85);
+        cell2.setGravity(View.TEXT_ALIGNMENT_GRAVITY);
         fila.addView(cell2);
 
         TextView cell3= new TextView(this);
         cell3.setText(product.getPrecio()+"");
-        cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        cell3.setWidth(80);
+        cell3.setGravity(View.TEXT_ALIGNMENT_GRAVITY);
         fila.addView(cell3);
 
         TextView cell4= new TextView(this);
         cell4.setText(valor+"");
-        cell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        cell4.setWidth(85);
+        cell4.setGravity(View.TEXT_ALIGNMENT_GRAVITY);
         fila.addView(cell4);
 
         table.addView(fila);
 
+    }
+
+    public void limpiarRegistro(){
+        name.setText("");
+        quantity.setText("");
+        prize.setText("");
+    }
+
+    public void total(ArrayList<Producto>compra){
+        int total=0;
+        for (Producto i:compra){
+            total+= i.getPrecio()*i.getCantidad();
+        }
+        System.out.println(total);
     }
 
 
