@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button register, close;
     TableLayout table;
 
-
+    TextView total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         register=findViewById(R.id.buttonRegistrar);
         close= findViewById(R.id.buttonFinalizar);
         table= findViewById(R.id.tableProducts);
+
+        total= findViewById(R.id.tvTotalValue);
 
         ArrayList<Producto> canasta= new ArrayList<>();
 
@@ -101,11 +103,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void total(ArrayList<Producto>compra){
-        int total=0;
+        int totalValue=0;
         for (Producto i:compra){
-            total+= i.getPrecio()*i.getCantidad();
+            totalValue+= i.getPrecio()*i.getCantidad();
         }
-        System.out.println(total);
+        total.setText(totalValue+"");
     }
 
 
